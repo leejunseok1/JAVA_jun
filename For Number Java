@@ -1,0 +1,50 @@
+import java.util.Scanner;
+
+public class For {
+
+	public static void main(String[] args) {
+
+		int sum = 0; // 초기화
+
+		for (int i = 1; i <= 15; i++) { // 1부터 15까지
+
+			if (i % 3 != 0 || i % 5 == 0 && i % 3 == 0) { // 3은 제외, 3과 5의배수는 포함
+				sum = sum + i;
+				if (i != 15) {   //15가 아닐때 출력
+					System.out.print(i + "+");
+				} else
+					System.out.print(i);아닐때 출력
+			}
+
+		}
+		System.out.println("=" + sum);
+//------------------------------------------------------
+		System.out.println();//같은 내용이나 다른 식을 만들어보았습니다.
+
+		sum = 0; //초기화
+
+		for (int i = 1; i <= 15; i++) { // 1부터 15까지
+
+			if (i % 3 == 0) { // 3의 배수일때
+				if (i % 5 == 0) { // 5의 배수일때
+					sum = sum + i; // 공식
+
+					if (i != 15) {  // 15가 아닐때
+						System.out.print(i + "+");
+					} else
+						System.out.print(i);
+				}
+			}else { // 
+				sum = sum + i;
+
+				if (i != 15) { 
+					System.out.print(i + "+");
+				} else
+					System.out.print(i);
+			}
+			
+				
+		}
+		System.out.println("=" + sum);
+	}
+}
