@@ -1,0 +1,31 @@
+import java.util.Scanner;
+
+public class Oh {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		
+		int x = sc.nextInt(); // x 입력값
+		int y = sc.nextInt(); // y 입력값
+		
+		if (x>0) {
+			if(y>0) {
+				System.out.println("1"); // x 와 y가 둘다 양수
+			}else if (y<0) {
+				System.out.println("4"); // x 양수 y 음수
+			}	
+		}else if(x<0) {
+			if(y>0) {
+				System.out.println("2");  // x음수 y 양수
+			}else if(y<0) {
+				System.out.println("3"); // x음수 y 음수
+        
+입력값
+//9  
+//-13
+
+출력값
+//4
+
+			}
+		}
+	
