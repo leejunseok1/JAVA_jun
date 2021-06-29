@@ -1,0 +1,38 @@
+import java.util.Scanner;
+
+public class Oh {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int A = sc.nextInt(); // A 입력값 
+		int B = sc.nextInt(); // B 입력값
+		
+		System.out.println(A*(B%10));    // B % 10 = 5
+		System.out.println(A*(B%100)/10); // (B%100)/10 = 8
+		System.out.println(A*(B/100)); // B/100 = 3
+		System.out.println(A*B); 181720
+//-------------------------------------------
+// 2번째 식
+Scanner sc = new Scanner(System.in);
+		int A = sc.nextInt();
+		String B = sc.next();
+		
+		System.out.println(A*(B.charAt(2)-'0')); //-- 5
+		System.out.println(A*(B.charAt(1)-'0')); //-- 8
+		System.out.println(A*(B.charAt(0)-'0')); //-- 3 
+		System.out.println(A*Integer.parseInt(B)); //B가 문자형식이니 인트형으로 바꿔주기함
+    
+//입력값   
+//472 
+//385
+//출력값
+//2360
+//4012
+//1416
+//181720
+
+
+
+
+	}
+
+}
