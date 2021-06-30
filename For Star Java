@@ -1,0 +1,18 @@
+import java.util.Scanner;
+
+public class Main {
+	public static void main(String[] args) {
+
+		Scanner sc = new Scanner(System.in);
+		int T = sc.nextInt();
+		
+		for (int i = 1; i <= T; i++) {  // T만큼 반복
+			for (int j = 1; j <= i; j++) { // 별을 i반복만큼 찍습니다.
+				System.out.print("*");
+				
+			}
+			System.out.println(); // 한줄이 실행됬을때 엔터를 찍습니다.
+		}
+	}
+
+}
