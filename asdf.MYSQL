@@ -1,0 +1,42 @@
+/*직원 first_name, last_name, salary
+소득세 (6%, 소수점 1자리 반올림) 조회해봅시다. */
+
+select first_name, last_name, salary, 
+round(salary*0.06, 1) from employees;
+
+/* 직원들 이름, 커미션(연봉 * 커미션 퍼센트) 0 초과
+*/
+select first_name, last_name, salary * commission_pct as commision 
+from employees
+where COMMISSION_PCT > 0;
+
+select * from
+(select first_name, last_name, salary * commission_pct as commission
+from employees) as a
+where COMMISSION > 0;
+
+/* first_name 에 'b' 나 'c'를 포함하는 직원들의 first_name.*/
+select first_name from employees
+where first_name like '%b%'
+	or first_name like '%c%';
+    
+/*Last_NAME이 6글자인 직원*/
+select last_name from employees
+where last_name  like '______';
+
+select last_name from employees
+where char_length(last_name) = 6;
+
+/*연봉의 범위가 10000~ 15000 사이의 직원들*/
+
+select last_name, salary from employees
+where salary >= 10000 and salary <=15000;
+
+select last_name, salary from employees
+where salary between 10000 and 15000; 
+
+select last_name, salary from employees
+where not (salary >= 10000 and salary <=15000);
+
+select last_name, salary from employees
+where salary not between 10000 and 15000;
